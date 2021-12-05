@@ -2,7 +2,7 @@ import axios from 'axios';
 import React from 'react';
 function Reactangle({ item }) {
     const deleteItem = () => {
-        axios.delete(`http://127.0.0.1:8000/api/polyline/${item.id}`)
+        axios.delete(`http://94.228.123.85/api/polyline/${item.id}`)
         .then(res=>console.log(res));
     }
     return (

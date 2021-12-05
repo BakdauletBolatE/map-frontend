@@ -48,14 +48,14 @@ function MapPage() {
   useEffect(() => {
     console.log(localtiesId);
     // window.location.reload()
-    axios.get(`http://127.0.0.1:8000/api/cities/localties/${localtiesId}`)
+    axios.get(`http://94.228.123.85/api/cities/localties/${localtiesId}`)
     .then(res=>setLocalites(res.data));
-    axios.get(`http://127.0.0.1:8000/api/new-polylines?typeMarkerId=${activeEl}&localtiesId=${localtiesId}`)
+    axios.get(`http://94.228.123.85/api/new-polylines?typeMarkerId=${activeEl}&localtiesId=${localtiesId}`)
       .then(res => {
         console.log(res.data)
         setPolylines(res.data)
       })
-    axios.get(`http://127.0.0.1:8000/api/relevants?typeId=${activeEl}&localtiesId=${localtiesId}`)
+    axios.get(`http://94.228.123.85/api/relevants?typeId=${activeEl}&localtiesId=${localtiesId}`)
     .then(res => {
       console.log(res.data)
       setRelevants(res.data)
@@ -120,7 +120,7 @@ function MapPage() {
       typeMarker: activeEl,
       positions: newPath
     }
-    axios.post('http://127.0.0.1:8000/api/polyline/', body, config)
+    axios.post('http://94.228.123.85/api/polyline/', body, config)
       .then(res => setPolylines([...polylines, res.data]))
     polyLineEl.current.setPath([])
     setPolyLineCreate(false)

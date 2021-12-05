@@ -28,7 +28,7 @@ function RuralInfo(props) {
 
     useEffect(()=>{
         SwiperCore.use([EffectCoverflow, Pagination, Navigation, Scrollbar]);
-        axios.get('http://127.0.0.1:8000/api/cities/rural/'+ruralId)
+        axios.get('http://94.228.123.85/api/cities/rural/'+ruralId)
         .then(res => {
             console.log(res.data)
             setDataRural(res.data);

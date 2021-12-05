@@ -28,7 +28,7 @@ function MainPage() {
 
   useEffect(() => {
 
-    axios.get('http://127.0.0.1:8000/api/cities/rural-list')
+    axios.get('http://94.228.123.85/api/cities/rural-list')
       .then(res => {
         setDataRurals(res.data);
         setMapCenter({
